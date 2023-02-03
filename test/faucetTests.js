@@ -19,7 +19,10 @@ describe('Faucet', function () {
 		const Faucet = await ethers.getContractFactory('Faucet');
 		const faucet = await Faucet.deploy();
 
-		const [owner] = await ethers.getSigners();
+		const [owner, signer2] = await ethers.getSigners();
+
+		console.log('Signer 1 address: ', owner.address); //I use the console.log function to print the address of the owner and signer2 variables.
+		// console.log('Signer 2 address: ', signer2.address); //I use the console.log function to print the address of the owner and signer2 variables.
 
 		// console.log('Signer 1 address: ', owner.address);
 		// return { faucet, owner }; // I return the faucet and owner variables so I can use them in my tests.
