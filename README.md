@@ -1,1 +1,1 @@
-Testing is one of the most important parts of smart contract development
+The testing rabbit hole is particularly great for anyone looking to get a solid foundation in smart contract security
