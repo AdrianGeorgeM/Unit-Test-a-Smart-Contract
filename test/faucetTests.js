@@ -21,14 +21,15 @@ describe('Faucet', function () {
 
 		const [owner] = await ethers.getSigners();
 
-		console.log('Signer 1 address: ', owner.address);
-		return { faucet, owner };
+		// console.log('Signer 1 address: ', owner.address);
+		// return { faucet, owner }; // I return the faucet and owner variables so I can use them in my tests.
+		return { faucet, owner }; // I return the faucet and owner variables so I can use them in my tests.
 	}
 
 	//It includes just one simple unit test checking that owner is set correctly at contract deployment.
 	it('should deploy and set the owner correctly', async function () {
 		const { faucet, owner } = await loadFixture(deployContractAndSetVariables);
 
-		expect(await faucet.owner()).to.equal(owner.address);
+		expect(await faucet.owner()).to.equal(owner.address); //I use the expect function from Chai to check that the owner is set correctly.
 	});
 });
